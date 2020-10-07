@@ -16,11 +16,17 @@ describe('Robot module', () => {
 
     // 1. Test that result is an array.
     test('result should be an array', () => {
+        // usin gthe Array.isArray method I can check weather result is an array
+        // and if it is toBeTruthy() will pass 
         expect(Array.isArray(result)).toBeTruthy()
     })
 
 
     // 2. Test that result[1] is of type object.
+    test('the second element of "result" should be a report object', () => {
+        // check that result one is an instance of the Object
+        expect(result[1]).toBeInstanceOf(Object)
+    })
 
 
 
@@ -30,6 +36,7 @@ describe('Robot module', () => {
 
         // 3. Test that report contains the properties: action, x, y, and facing.
         test('the second element of "report" should be a report object', () => {
+            // I check weather report has a property and if it does I check the next until the end
             expect(report).toHaveProperty('action')
             expect(report).toHaveProperty('x')
             expect(report).toHaveProperty('y')
@@ -38,12 +45,25 @@ describe('Robot module', () => {
 
 
         // 4. Test that report.x is a number between 0 and 5.
-
+        test('report.x should be a number betweeen 0 and 5', () => {
+            // I check weather report.x is greater than 0 and after check if its less than zero
+            expect(report.x).toBeGreaterThan(0)
+            expect(report.x).toBeLessThan(5)
+        })
 
         // 5. Test that report.y is a number between 0 and 5.
+        test('report.y should be a number betweeen 0 and 5', () => {
+            expect(report.y).toBeGreaterThan(0)
+            expect(report.y).toBeLessThan(5)
+        })
 
 
         // 6. Test that report.facing is one of: NORTH, SOUTH, EAST, or WEST.
+        test('report.facing should be one of: NORTH, SOUTH, EAST, WEST', () => {
+            // using the .includes methods on strings and arrays I can check if NORTH SOUTH EAST or WEST is in
+            // the report.facing and if yes the test pass
+            expect(report.facing.includes('NORTH', 'SOUTH', 'EAST', 'WEST')).toBeTruthy()
+        })
 
     })
 })
