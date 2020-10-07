@@ -1,0 +1,14 @@
+{
+  "name": "h2-unit-testing",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/rach0022/mad9135-f20-h2-unit-testing",
+  "author": "rach0022",
+  "license": "MIT",
+  "devDependencies": {
+    "jest": "^26.5.2"
+  },
+  "scripts": {
+    "test": "jest"
+  }
+}
