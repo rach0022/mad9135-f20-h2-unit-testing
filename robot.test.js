@@ -21,12 +21,7 @@ describe('Robot module', () => {
 
 
     // 2. Test that result[1] is of type object.
-    test('the second element of "result" should be a report object', () => {
-        expect(result[1]).toHaveProperty('action')
-        expect(result[1]).toHaveProperty('x')
-        expect(result[1]).toHaveProperty('y')
-        expect(result[1]).toHaveProperty('facing')
-    })
+
 
 
     describe('Validate report values', () => {
@@ -34,6 +29,12 @@ describe('Robot module', () => {
         const report = result[1];
 
         // 3. Test that report contains the properties: action, x, y, and facing.
+        test('the second element of "report" should be a report object', () => {
+            expect(report).toHaveProperty('action')
+            expect(report).toHaveProperty('x')
+            expect(report).toHaveProperty('y')
+            expect(report).toHaveProperty('facing')
+        })
 
 
         // 4. Test that report.x is a number between 0 and 5.
