@@ -16,7 +16,7 @@ describe('Robot module', () => {
 
     // 1. Test that result is an array.
     test('result should be an array', () => {
-        // usin gthe Array.isArray method I can check weather result is an array
+        // using the Array.isArray method I can check weather result is an array
         // and if it is toBeTruthy() will pass 
         expect(Array.isArray(result)).toBeTruthy()
     })
@@ -36,7 +36,7 @@ describe('Robot module', () => {
 
         // 3. Test that report contains the properties: action, x, y, and facing.
         test('report should contain the properties: action, x, y, facing', () => {
-            // I check weather report has a property and if it does I check the next until the end
+            // check wether report has a property and if it does, check the next until the end
             expect(report).toHaveProperty('action')
             expect(report).toHaveProperty('x')
             expect(report).toHaveProperty('y')
@@ -46,7 +46,7 @@ describe('Robot module', () => {
 
         // 4. Test that report.x is a number between 0 and 5.
         test('report.x should be a number betweeen 0 and 5', () => {
-            // I check weather report.x is greater than 0 and after check if its less than zero
+            // I check wether report.x is greater than 0 and after check if its less than zero
             expect(report.x).toBeGreaterThan(0)
             expect(report.x).toBeLessThan(5)
         })
