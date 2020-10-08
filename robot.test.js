@@ -35,7 +35,7 @@ describe('Robot module', () => {
         const report = result[1];
 
         // 3. Test that report contains the properties: action, x, y, and facing.
-        test('the second element of "report" should be a report object', () => {
+        test('report should contain the properties: action, x, y, facing', () => {
             // I check weather report has a property and if it does I check the next until the end
             expect(report).toHaveProperty('action')
             expect(report).toHaveProperty('x')
